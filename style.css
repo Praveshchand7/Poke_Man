@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@600;700&display=swap");
+:root {
+  --bg-color: blue;
+  --primary-color: aliceblue;
+  --font: "Spartan", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+body {
+  background-color: var(--bg-color);
+  background: url("pc.jpeg");
+  font-family: var(--font);
+  height: 100px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.class {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px #333;
+}
+
+.class:hover {
+  background-color: green;
+  box-shadow: 0 0 25px #333;
+}
+/* Object-fit helps us to not to picture squeexzed */
+.class img {
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  filter: sepia(80%) blur(1px);
+}
+
+.class img:hover {
+  filter: sepia(0) blur(1px);
+  height: 300px;
+  border: 10px solid green;
+}
+
+h1 {
+  text-shadow: 5px 5px 5px yellow;
+}
+.box {
+  height: 200px;
+  width: 150px;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  position: relative;
+  z-index: 100;
+}
